@@ -17,7 +17,7 @@ $(function(){
 			var that = this ;
 
 			$(that.settings.calc_action).click(function (e) {
-				event.preventDefault() ;
+				e.preventDefault() ;
 
 				var $btn = $(this) ;
 				var $numerador = $( that.settings.numerador ) ;
@@ -58,8 +58,8 @@ $(function(){
 		reset: function() {
 			var that = this ;
 			$(that.settings.reset_action).click(function (e) {
-				event.preventDefault() ;
-				$( that.settings.numerador ).val("");
+				e.preventDefault() ;
+				$( that.settings.numerador ).val("").focus();
 				$( that.settings.denominator ).val("");
 				$( that.settings.result ).html("&nbsp;");
 				$( that.settings.calc_action ).removeClass( "success" ).val( "=" ) ;
