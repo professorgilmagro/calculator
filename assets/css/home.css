@@ -26,6 +26,7 @@ aside.history table thead{
 
 aside.history table thead th{
     font-size: 0.9em;
+    padding: 5px 2px;
 }
 
 aside.history table tbody td{
@@ -33,7 +34,13 @@ aside.history table tbody td{
     font-size: 0.9em;
     padding: 5px 2px;
     text-align: center;
+    border-bottom: 1px solid darkgrey;
 }
+
+aside.history table tbody td img{
+    padding: 0 3px;
+}
+
 aside.history table tbody td:first-child{
     text-align: left;
 }
@@ -96,6 +103,7 @@ form.calculator .btn-calculate{
     -moz-border-radius: 150px;
     border-radius: 150px;
     background: #333;
+    outline: none;
 }
 
 form.calculator .btn-calculate:hover{

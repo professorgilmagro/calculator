@@ -38,13 +38,15 @@ $(function(){
 
 				var numerador = parseFloat( $numerador.val() );
 				var denominator = parseFloat( $denominator.val() );
+				var category = that.getCategory( numerador , denominator ) ;
 
 				$result.text( numerador / denominator ) ;
-				$btn.val( that.get_category( numerador , denominator ) ) ;
+				$btn.val( category ) ;
 				$btn.addClass( "success" ) ;
+				that.addToHistory( numerador, denominator, category );
 			});
 		} ,
-		get_category: function( numerador , denominator ) {
+		getCategory: function( numerador , denominator ) {
 			if ( numerador < denominator ) {
 				return "Própria" ;
 			}
@@ -54,6 +56,22 @@ $(function(){
 			}
 
 			return "Imprópria" ;
+		} ,
+		addToHistory: function( numerador , denominator , category ) {
+			var $history = $(".history").find("table");
+			var $new_line = $history.find("tbody").find("tr").last().clone();
+
+			// verifica se é a mesma linha para evitar duplicação
+			if( parseFloat($new_line.find("td").find(".numerador").text()) == numerador
+				&& parseFloat($new_line.find("td").find(".divisor").text()) == denominator){
+				return ;
+			}
+
+			$new_line.find("td").find(".numerador").text(numerador);
+			$new_line.find("td").find(".divisor").text(denominator);
+			$new_line.find("td").eq(1).text( parseFloat((numerador/denominator).toFixed(2)));
+			$new_line.find("td").eq(2).text(category);
+			$history.append( $new_line );
 		} ,
 		reset: function() {
 			var that = this ;
