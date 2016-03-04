@@ -102,7 +102,7 @@ img.logo{
 }
 
 footer{
-    padding: 10px;
+    padding: 10px 0;
     margin-top: 20px;
     display: block;
     clear: both;
@@ -118,67 +118,6 @@ section{
 
 article header p{
     font-size: 24px;
-}
-
-@media screen and (max-width: 1280px) {
-    h1 {
-        font-size: 4rem
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    h1 {
-        font-size: 3rem
-    }
-}
-
-@media screen and (max-width: 767px) {
-    h1 {
-        font-size: 2.25rem
-    }
-    h2 {
-        margin-right: 10%;
-        margin-left: 10%
-    }
-    p {
-        font-size: 1rem
-    }
-}
-
-@media screen and (max-width: 380px) {
-    h1 {
-        font-size: 1.5rem
-    }
-    h2 {
-        font-size: 1rem
-    }
-    p {
-        padding-right: 10%;
-        padding-left: 10%
-    }
-    .header h1 {
-        font-size: 1.5rem
-    }
-    .main-menu ul li {
-        font-size: 1.5rem
-    }
-    footer ul li {
-        padding: 15px
-    }
-
-    section.content-left,
-    section.content-right{
-        float: none;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    section.content-right {
-        float: none;
-        width: 100%;
-        background: #FDFDFD;
-        min-height: 650px;
-    }
 }
 
 img.icon-calc{

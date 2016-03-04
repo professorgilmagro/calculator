@@ -112,66 +112,7 @@ form.calculator .btn-calculate:hover{
 }
 
 
-@media screen and (max-width: 380px) {
-    article header p{
-        font-size: 1.2em;
-    }
-    section.content-left,
-    section.content-right{
-        float: none;
-        width: 99%;
-        margin-top: 10px;
-    }
 
-    section.content-right {
-        float: none;
-        width: 100%;
-        background: #FDFDFD;
-        min-height: 650px;
-    }
-
-    form.calculator ul li {
-        width: 80%;
-    }
-
-    header.main nav ul{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    header.main nav ul li{
-        line-height: normal;
-        height: auto;
-        float: none;
-        width: 90%;
-        display: block;
-        border-bottom: 1px solid darkgray;
-        padding: 0.5em 0;
-        margin: auto;
-    }
-
-    aside.history table{
-        width: 95%;
-        margin: auto;
-    }
-
-    form.calculator {
-       position: static;
-       display: table;
-       clear: both;
-        width: 78%;
-        margin: auto;
-    }
-
-    form.calculator .btn-calculate{
-        position: static;
-        display: block;
-        clear: both;
-        margin: auto;
-    }
-
-}
 
 img.icon-calc{
     width: 25px;
