@@ -145,7 +145,7 @@ article header p{
     }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 380px) {
     h1 {
         font-size: 1.5rem
     }
@@ -164,6 +164,20 @@ article header p{
     }
     footer ul li {
         padding: 15px
+    }
+
+    section.content-left,
+    section.content-right{
+        float: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    section.content-right {
+        float: none;
+        width: 100%;
+        background: #FDFDFD;
+        min-height: 650px;
     }
 }
 

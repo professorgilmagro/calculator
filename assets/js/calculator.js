@@ -59,7 +59,7 @@ $(function(){
 		} ,
 		addToHistory: function( numerador , denominator , category ) {
 			var $history = $(".history").find("table");
-			var $new_line = $history.find("tbody").find("tr").last().clone();
+			var $new_line = $history.find("tbody").find("tr").first().clone();
 
 			// verifica se é a mesma linha para evitar duplicação
 			if( parseFloat($new_line.find("td").find(".numerador").text()) == numerador
@@ -67,11 +67,13 @@ $(function(){
 				return ;
 			}
 
+			$new_line.hide();
 			$new_line.find("td").find(".numerador").text(numerador);
 			$new_line.find("td").find(".divisor").text(denominator);
 			$new_line.find("td").eq(1).text( parseFloat((numerador/denominator).toFixed(2)));
 			$new_line.find("td").eq(2).text(category);
-			$history.append( $new_line );
+			$history.prepend( $new_line ) ;
+			$history.find("tbody").find("tr").first().fadeIn( 1000 );
 		} ,
 		reset: function() {
 			var that = this ;
